@@ -273,7 +273,90 @@ const Dispense = ({  }) => {
           marginTop: 31}}>
               Schedule dispense
             </DialogTitle>
-            <DialogContent></DialogContent>
+            <DialogContent>
+              <Typography
+              style={{
+                
+  fontFamily: "'Roboto'",
+  fontStyle: "normal",
+  fontWeight: 400,
+  fontSize: "18px",
+  lineHeight: "21px",
+  textAlign: "center",
+  color: "#BAB9B9"
+              }}>Please enter the quantity of drug to be dispensed on </Typography>
+              <Typography
+              style={{
+                fontFamily: "'Roboto'",
+                fontStyle: 'normal',
+                fontWeight: 'bold',
+                fontSize: '18px',
+                lineHeight: '21px',
+                textAlign: 'center',
+                color: '#BAB9B9',
+                margin: '-20px 0px 0px 130px'
+              }}
+            >
+              {selectedDate ? (
+                <>
+                  {selectedDate.day}/{selectedDate.month}/{selectedDate.year}
+                </>
+              ) : (
+                'None'
+              )}
+            </Typography>
+            <TextField
+            autoFocus
+            margin="dense"
+            
+            id="name"
+            placeholder='1'
+           
+            style={{
+              backgroundColor: '#216194',
+              color: '#fff',
+              borderRadius: '16px',
+              width: '60px',
+              height: '40px',
+              alignContent: 'center',
+              margin: '10px 0px 0px 130px',
+              
+            }}
+          InputProps={{
+            disableUnderline: true,
+            
+
+           
+          }}
+          
+          inputProps={{
+            className: classes.textFieldInput2,
+          }}
+            
+       
+
+            fullWidth
+            variant="standard"
+          />
+          <Grid
+          style={{
+            
+  margin: '-25px 0px 0px 200px'
+          }}>
+          <Typography
+          style={{
+            
+  fontFamily: "'Roboto'",
+  fontStyle: "normal",
+  fontWeight: 400,
+  fontSize: "16px",
+  lineHeight: "19px",
+  color: "#216194",
+          }}>Unit</Typography>
+          </Grid>
+
+
+            </DialogContent>
             <DialogActions style={{ justifyContent: 'center', marginBottom: 32 }}>
               <Button
                 style={{
@@ -283,7 +366,7 @@ const Dispense = ({  }) => {
                   borderWidth: '2px',
                   backgroundColor: '#f1f6fd',
                   textTransform: 'none',
-                  width: '80px',
+                  width: '128px',
                   height: '42px',
                 }}
                 variant="outlined"
@@ -297,7 +380,7 @@ const Dispense = ({  }) => {
                   color: '#fff',
                   backgroundColor: '#216194',
                   textTransform: 'none',
-                  width: '80px',
+                  width: '128px',
                   height: '42px',
                 }}
                 variant="contained"
@@ -309,6 +392,36 @@ const Dispense = ({  }) => {
           </>
         )}
       </Dialog>
+      <Grid
+      style={{
+        
+  background: "#FFFFFF",
+  boxShadow: "0px 15px 30px rgba(33, 97, 148, 0.1)",
+  borderRadius: "16px",
+  width: '416px',
+  height: '80px',
+  marginTop: 150
+      }}>
+              <Typography
+              style={{
+                fontFamily: "'Roboto'",
+                fontStyle: "normal",
+                fontWeight: 400,
+                fontSize: "16px",
+                lineHeight: "19px",
+                color: "#BAB9B9",
+                margin: '45px 0px 0px 20px'
+              }}
+            >
+              {selectedDate ? (
+                <>
+                  {selectedDate.day}/{selectedDate.month}/{selectedDate.year}
+                </>
+              ) : (
+                'None'
+              )}
+            </Typography>
+            </Grid>
     </Grid>
   );
 };

@@ -848,7 +848,9 @@ export default function EnhancedTable() {
     >
         <ListItemText primary="Dispense" />
       </Button>
+      
   </MenuItem>
+  
   <MenuItem value="option2">
     <Button fullWidth
       style={{

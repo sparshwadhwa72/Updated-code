@@ -30,10 +30,37 @@ Grid1: {
     
   background: "#FFFFFF",
   boxShadow: "0px 15px 30px rgba(33, 97, 148, 0.1)",
-  borderRadius: "16px",
+  borderRadius: "16px 16px 0px 0px ",
   width: '416px',
   height: '80px',
   
+  marginTop: 32
+},
+KindoPasscode2: {
+  
+                                 
+      fontFamily: "'Roboto'",
+      fontStyle: "normal",
+      fontWeight: 700,
+      fontSize: "18px",
+      lineHeight: "21px",
+      display: "flex",
+      alignItems: "center",
+      textAlign: "center",
+      color: "#216194",
+      
+      padding: 16,
+      marginLeft: 4
+},
+
+Grid3: {
+  
+                        
+  background: "#FFFFFF",
+  boxShadow: "0px 15px 30px rgba(33, 97, 148, 0.1)",
+  borderRadius: "16px",
+  width: '304px',
+  height: '80px',
   marginTop: 32
 },
 ConnectionStatus: {
@@ -45,6 +72,51 @@ ConnectionStatus: {
   color: "#216194",
   margin: '0px 0px 0px 4px',
   padding: 16
+},
+Tab: {
+  
+  fontFamily: "'Roboto'",
+  fontStyle: "normal",
+  fontWeight: 700,
+  fontSize: "18px",
+  textAlign: "center",
+  color: "#216194",
+  
+background: "#FFFFFF",
+borderRadius: "16px",
+textTransform: 'none',
+},
+
+ExpandableGrid: {
+  width: '419px',
+  height: '437px',
+  borderRadius: '0px 0px 16px 16px',
+  backgroundColor: '#FFFFFF',
+  boxShadow: "0px 15px 30px rgba(33, 97, 148, 0.1)",
+  marginBottom: 10,
+
+
+},
+ExpandedContent: {
+  
+  fontFamily: "'Roboto'",
+  fontStyle: "normal",
+  fontWeight: 400,
+  fontSize: "16px",
+  color: "#BAB9B9",
+  marginTop: -10,
+  padding: '32px 0px 0px 20px'
+},
+
+
+ExpandedContent2: {
+  
+  fontFamily: "'Roboto'",
+  fontStyle: "normal",
+  fontWeight: 400,
+  fontSize: "16px",
+  color: "#BAB9B9",
+  padding: '16px 0px 0px 20px'
 },
 
 KindoID: {
@@ -541,6 +613,17 @@ Grid: {
 margin: '16px 0px 0px 20px',
 
               },
+              KindoPasscode: {
+                
+                    
+      fontFamily: "'Roboto'",
+      fontStyle: "normal",
+      fontWeight: 700,
+      fontSize: "24px",
+      lineHeight: "28px",
+      color: "#969696",
+              },
+              
               
               Checkbox2: {
                 margin: '16px 0px 0px 20px',

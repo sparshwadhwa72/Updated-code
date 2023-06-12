@@ -210,7 +210,9 @@ const useStyles = makeStyles((theme) => ({
       iconLabelWrapper: {
         flexDirection: "row"
     },tabIcon:{
-        marginRight:'1em'
+        marginRight:'10px',
+        
+      margin: '5px 0px 0px 0px'
     },tablePaper:{
         padding:'3em 0px 3em 0px '
     }
