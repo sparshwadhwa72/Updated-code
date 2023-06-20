@@ -113,7 +113,7 @@ function EnhancedTableHead(props) {
           <Checkbox
          
          className={classes.blueCheckbox}
-            indeterminate={numSelected > 0 && numSelected < rowCount}
+           // indeterminate={numSelected > 0 && numSelected < rowCount}
             checked={rowCount > 0 && numSelected === rowCount}
             onChange={onSelectAllClick}
             inputProps={{ 'aria-label': 'select all desserts' }}
@@ -499,11 +499,7 @@ PaperProps={{
       )}
 
 
-        <Tooltip title="Print csv">
-          <IconButton aria-label="printCSV">
-            <PrintIcon />
-          </IconButton>
-        </Tooltip>
+      
       
     </Toolbar>
   );

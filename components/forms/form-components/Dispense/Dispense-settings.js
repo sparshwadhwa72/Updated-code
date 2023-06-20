@@ -36,6 +36,17 @@ Grid1: {
   
   marginTop: 32
 },
+
+Grid1new: {
+    
+    background: "#FFFFFF",
+    boxShadow: "0px 15px 30px rgba(33, 97, 148, 0.1)",
+    borderRadius: "16px 16px 0px 0px ",
+    width: '640px',
+    height: '80px',
+    
+    marginTop: 32
+  },
 KindoPasscode2: {
   
                                  
@@ -87,8 +98,8 @@ textTransform: 'none',
 },
 
 ExpandableGrid: {
-  width: '419px',
-  height: '437px',
+  width: '640px',
+  height: '234px',
   borderRadius: '0px 0px 16px 16px',
   backgroundColor: '#FFFFFF',
   boxShadow: "0px 15px 30px rgba(33, 97, 148, 0.1)",
@@ -98,14 +109,26 @@ ExpandableGrid: {
 },
 ExpandedContent: {
   
+    
   fontFamily: "'Roboto'",
   fontStyle: "normal",
-  fontWeight: 400,
+  fontWeight: 700,
   fontSize: "16px",
   color: "#BAB9B9",
   marginTop: -10,
-  padding: '32px 0px 0px 20px'
+  padding: '16px 0px 0px 20px'
 },
+
+ExpandedContent3: {
+  
+    
+    fontFamily: "'Roboto'",
+    fontStyle: "normal",
+    fontWeight: 700,
+    fontSize: "16px",
+    color: "#BAB9B9",
+    padding: '22px 0px 0px 20px'
+  },
 
 
 ExpandedContent2: {
@@ -115,7 +138,7 @@ ExpandedContent2: {
   fontWeight: 400,
   fontSize: "16px",
   color: "#BAB9B9",
-  padding: '16px 0px 0px 20px'
+  padding: '8px 0px 0px 20px'
 },
 
 KindoID: {  

@@ -9,8 +9,12 @@ import {
   DialogContent,
   DialogActions,
 } from '@material-ui/core';
-import { MuiPickersUtilsProvider, TimePicker } from '@material-ui/pickers';
-import DateFnsUtils from '@date-io/date-fns'; // You can choose a different date utility library if desired
+
+import { StaticTimePicker } from '@mui/x-date-pickers/StaticTimePicker';
+import dayjs from 'dayjs';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { Box } from '@mui/material';
 
 import { Calendar, utils } from '@hassanmojab/react-modern-calendar-datepicker';
 
@@ -22,6 +26,7 @@ const DialogPage1 = () => {
   const handleOpenDialog = () => {
     setOpenDialog(true);
   };
+  
 
   const handleCloseDialog = () => {
     setOpenDialog(false);
@@ -265,9 +270,11 @@ const DialogPage2 = ({ setSelectedDate }) => {
 };
 
 const DialogPage3 = ({ selectedDate }) => {
+  
+  const [value, setValue] = React.useState(dayjs('2022-04-17T15:30'));
   return (
     <DialogContent>
-      {/* Page 3 content */}
+      
       <Typography
       style={{
         
@@ -290,6 +297,12 @@ const DialogPage3 = ({ selectedDate }) => {
   textAlign: "center",
   color: "#BAB9B9"
       }}>{selectedDate ? selectedDate.toString() : 'None'}</Typography>
+         <LocalizationProvider dateAdapter={AdapterDayjs}>              
+          <StaticTimePicker           
+          value={value}
+          onChange={(newValue) => setValue(newValue)} />          
+    </LocalizationProvider>
+         
     </DialogContent>
   );
 };
@@ -351,8 +364,7 @@ const MyDialog = () => {
           marginTop: 31,
           
   textAlign: "center",
-  color: "#216194",
-  
+  color: "#216194",  
   fontFamily: "'Roboto'",
   fontStyle: "normal",
   fontWeight: 700,

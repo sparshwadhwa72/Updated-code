@@ -150,7 +150,7 @@ style={{ borderBottom: 'none' }}
                         className={classes.KindoPasscode2}
                         >New Kindo passcode</Typography>
        <TextField
-  className={classes.textField}
+  className={classes.PasscodeTextfield}
   type={showPassword ? 'text' : 'password'}
   value={password}
   onChange={handlePasswordChange}
@@ -160,20 +160,16 @@ style={{ borderBottom: 'none' }}
   
   placeholder="4 number characters"
 />
-        <FormControlLabel
-          control={
-            <Checkbox
-              checked={showPassword}
-              onChange={handleShowPasswordChange}
-              color="primary"
-            />
-          }
-          label="Show password"
-        />
+        
                     </Grid>
                     <Grid item className={classes.Grid3}>
                         <Typography className={classes.KindoPasscode2}>Confirm Kindo pass code</Typography>
                         <TextField
+                        
+  className={classes.PasscodeTextfield}
+  type={showPassword ? 'text' : 'password'}
+  value={password}
+  onChange={handlePasswordChange}
                         InputProps={{
                           
             disableUnderline: true,
@@ -182,6 +178,24 @@ style={{ borderBottom: 'none' }}
           placeholder="4 number characters"
          
           // Add any additional TextField props or event handlers you need
+        />
+        <FormControlLabel style={{
+          margin: '32px 0px 0px 0px',
+          
+  fontFamily: "'Roboto'",
+  fontStyle: "normal",
+  fontWeight: 400,
+  fontSize: "16px",
+  color: "#BAB9B9",
+        }}
+          control={
+            <Checkbox
+              checked={showPassword}
+              onChange={handleShowPasswordChange}
+              color="primary"
+            />
+          }
+          label="Show password"
         />
                     </Grid>
                     
@@ -311,7 +325,10 @@ color: "#216194",}} className={classes.Checkbox2}/>
                 style={{
                   marginTop: '-10px'
                 }}>
-                <Button onClick={toggleExpansion}>
+                <Button onClick={toggleExpansion} style={{ margin: '-40px 0px 0px 330px',
+              
+  background: "#F3F8FE",
+  borderRadius: "16px"}}>
           {isExpanded ? '▲' : '▼'}
         </Button>
         {isExpanded && (
@@ -373,8 +390,8 @@ onClick={handleOpenDialog}>Reset</Button>
     background: "#FFFFFF",
     boxShadow: "0px 15px 30px rgba(33, 97, 148, 0.1)",
     borderRadius: "16px",
-    width: '419px',
-    height: '320px',
+    width: '416px',
+    height: '308px',
   }
  }}>
       <DialogTitle className={classes.RestDialogTitle}>Clean the Kindo</DialogTitle>

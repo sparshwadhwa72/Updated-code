@@ -43,10 +43,10 @@ import Avatar from '@material-ui/core/Avatar';
 import Divider from '@material-ui/core/Divider';
 import ManageDrugTwo from '@components/forms/Manage-drug-pg2';
 import { Button } from '@material-ui/core';
-import Dispense from '@components/forms/Dispense';
+import Dispense from '@components/forms/form-components/Dispense/Dispense';
 import MyDialog from '@components/forms/form-components/3pagedialog';
 import Mydialog from '@components/forms/form-components/3pagedialog';
-import DailyPlanner from '@components/forms/Indivisual-schedule';
+import DailyPlanner from '@components/forms/form-components/Indivisual-schedule/Indivisual-schedule';
 import KindoSettings from '@components/forms/form-components/Kindo-Settings/Kindo-Settings';
 
 
@@ -562,8 +562,7 @@ const useStyles = makeStyles((theme) => ({
               </TabPanel>
 
               <TabPanel value={value} index={5}>
-                
-              <Dispense></Dispense>
+                <Dispense></Dispense>
               </TabPanel>
 
             </Grid>

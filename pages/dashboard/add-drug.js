@@ -124,13 +124,16 @@ const AddDrug = () => {
                 
 
                 
-                {currentPage === 1 && <AddDrugfour formMethods={methods} />}
+                {currentPage === 1 && <AddDrugOne formMethods={methods} />}
 
                 
-                {currentPage === 2 && <Adddrugsix formMethods={methods} />}
+                {currentPage === 2 && <AddDrugTwo formMethods={methods} />}
 
                 
-                {currentPage === 3 && <Adddrugseven formMethods={methods} />}
+                {currentPage === 3 && <AddDrugThree formMethods={methods} />}
+
+                
+                {currentPage === 4 && <AddDrugfour formMethods={methods} />}
 
                 
 
