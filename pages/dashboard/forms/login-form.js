@@ -5,71 +5,19 @@ import { makeStyles } from '@material-ui/core/styles';
 import '@fontsource/roboto';
 import TextInput from './form-components/text-input/text-input';
 import { Login } from '@utils/axios';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
+import useStyles from './Login/Signup-Styles';
+import SignupForm from './signup-form';
 
 
-const useStyles = makeStyles({
-    titleText: {
-        fontFamily: 'Roboto',
-        fontWeight: '500',
-        fontSize: '24px',
-        color: '#264a73',
-    },
-    textField: {
-        width: '436px',
-        margin: '32px 0 0 0',
-    },
-
-    formButton: {
-       backgroundColor: '#216194',
-       borderRadius: '16px',
-       width: '240px',
-       height: '48px',
-       boxShadow: '0 0 0 0',
-       fontFamily: 'Roboto',
-       color: '#fff',
-       fontSize: '16px',
-       textTransform: 'capitalize',
-       marginTop: '48px',
-    },
-
-    externalLoginButton: {
-        backgroundColor: '#f3f8fe',
-        borderRadius: '16px',
-        width: '240px',
-        height: '48px',
-        textTransform: 'none',
-        color: '#216194',
-        marginBottom: '16px'
-
-    },
-
-    checkBoxControl: {
-        margin: '24px 0 0 0',
-    },
-
-    checkBoxLabel: {
-        color: '#969696',
-        fontSize: '16px',
-        '.MuiFormControlLabel-label': {
-            fontSize: '16px'
-        },
-    },
-    tinyText: {
-        fontSize: '11px',
-        color: '#969696'
-    },
-    errorText: {
-        fontSize: '11px'
-    }
-
-});
 const LoginForm = () => {
     const { handleSubmit, control, formState: { errors } } = useForm({
         mode: 'onTouched',
         reValidateMode: 'onChange',
         criteriaMode: 'all'
     });
+    const [forgotPasswordClicked, setForgotPasswordClicked] = useState(false);
+
     const [ showPassword, setShowPassword ] = useState(false);
     const [ keepLoggedIn, setKeepLoggedIn ] = useState(false);
     const classes = useStyles();
@@ -83,32 +31,45 @@ const LoginForm = () => {
     };
 
 
-    const onSubmit = (data) => {Login({email:data.email, password: data.password}).then(response=>{
-        if (response){
-            router.push('/dashboard')
+    const onSubmit = (data) => {
+        if (forgotPasswordClicked) {
+          // Redirect to the password recovery page
+          router.push('/signup-form');
+        } else {
+          // Handle regular login
+          Login({ email: data.email, password: data.password }).then((response) => {
+            if (response) {
+              router.push('/signup-form');
+            }
+          });
         }
-    })}
+      };
+      
+    
 
     return (
         <Container>
+            {forgotPasswordClicked ? (
+      <SignupForm />
+    ) : (
             <Grid container direction='column' alignItems='center' justifyContent='space-evenly' spacing={2}>
-                <Grid item container direction='row'>
+                <Grid>
                     <Typography variant='h3' className={classes.titleText}>
                         Login
                     </Typography>
                 </Grid>
-                <Grid item container direction='column'>
+                <Grid >
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <Grid container item direction='column'>
                             <Grid item>
                                 <TextInput
                                     control={control}
                                     name='email'
-                                    label='Your e-mail'
+                                    label='Your email'
                                     placeholder='example@domain.com'
                                     additionalStyles={classes.textField}
                                     rules={{ 
-                                        required: 'Enter an e-mail ID',
+                                        required: 'email address is incorrect/ is not exist',
                                         pattern: {
                                             value: /\S+@\S+\.\S+/,
                                             message: 'Enter a valid email address'
@@ -174,7 +135,8 @@ const LoginForm = () => {
                                 />
                             </Grid>
                             <Grid item container direction='row' justifyContent='center'>
-                                <Button type='submit' variant='contained' className={classes.formButton}>
+                                <Button type='submit' variant='contained' className={classes.formButton}
+                                >
                                     Log in
                                 </Button>
                             </Grid>
@@ -197,8 +159,20 @@ const LoginForm = () => {
                             Log in with Facebook
                         </Button>
                     </Grid>
+                    
+                    <Grid item container justifyContent='center'>
+                    <Typography>Don't have an account?</Typography>
+                    <Typography>Sign up</Typography>
+                    </Grid>
+                    <Grid item container justifyContent='center'>
+                    <Typography onClick={() => setForgotPasswordClicked(true)}>Forgot password?</Typography>
+
+                    
+                    </Grid>
+
                 </Grid>
             </Grid>
+             )}
         </Container>
     )
 

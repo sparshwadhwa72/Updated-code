@@ -13,9 +13,10 @@ const useStyles = makeStyles({
   fontSize: '16px',
   color: '#216194',
   textAlign: 'center',
+  minWidth: '100%',
 
-  '@media(max-Width: 412px)' : {
-    width: '16%',
+  '@media(max-Width: 600px)' : {
+    minWidth: '100%',
   },
   },
 
@@ -34,12 +35,22 @@ const useStyles = makeStyles({
   '@media only screen and (max-device-width: 900px)' : {
     width: '352px',
   },
-        
-        
-         
-        
-        
-    },
+   },
+   textField2: {
+    height: '80px',
+    width: '304px',
+    padding: '16px 76px 16px 20px',
+    background: "#FFFFFF",
+    boxShadow: "0px 15px 30px rgba(33, 97, 148, 0.1)",
+    borderRadius: "16px",
+   
+   
+    
+
+'@media only screen and (max-device-width: 900px)' : {
+width: '352px',
+},
+},
     
     dropdownInput: {
         marginBotton: '16px',
@@ -140,6 +151,27 @@ const useStyles = makeStyles({
         
         }
       },
+      
+    
+    cssOutlinedInput2: {
+      height: '82px',
+      margin: '-2px 0px 43px -20px',
+      width: '590px',
+      
+      '&$cssFocused $notchedOutline': {
+        borderColor: '#216194',
+        '@media(max-Width: 900px)' : {
+          width: '60%'
+        },
+      borderRadius: '16px',
+      padding: '16px 76px 16px 20px',
+      margin: '-13px 0px 43px 0',
+      height: '85px',
+      width: '304px',
+       
+      
+      }
+    },
 
       root: {
        
@@ -193,6 +225,23 @@ const useStyles = makeStyles({
     margin: '-14px 0px 43px 0',
     height: '85px',
     width: '644px',
+   
+
+  },
+  
+  notchedOutline2: {
+    borderWidth: '2px',
+    borderColor: '#fff',
+   
+    color: 'red',
+    '@media(max-Width: 390px)' : {
+      width: '21.5%'
+    },
+    borderRadius: '16px',
+    padding: '16px 76px 16px 20px',
+    margin: '-14px 0px 43px 0',
+    height: '85px',
+    width: '304px',
    
 
   },

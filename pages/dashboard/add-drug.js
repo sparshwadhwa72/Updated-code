@@ -124,8 +124,8 @@ const AddDrug = () => {
                 
 
                 
-                {currentPage === 1 && <AddDrugOne formMethods={methods} />}
 
+          {currentPage === 1 && <AddDrugOne formMethods={methods} />}
                 
                 {currentPage === 2 && <AddDrugTwo formMethods={methods} />}
 

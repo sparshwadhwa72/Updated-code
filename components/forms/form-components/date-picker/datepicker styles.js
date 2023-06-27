@@ -41,6 +41,29 @@ const useStyles = makeStyles({
     },
   },
 
+  Inputbox3: {
+    height: '80px',
+    width: '640px',
+    borderRadius: '16px',
+    borderColor: '#fff',
+    boxShadow: '0 15px 30px 0 rgba(33, 97, 148, 0.15)',
+    padding: '16px 76px 16px 20px',
+ 
+marginTop: 32,
+    '@media(max-Width: 390px)' : {
+      width: '120%',
+      margin: '-17px 0px 0px 0px',
+    },
+    backgroundColor: '#fff',
+    "& input::placeholder": {
+      fontFamily: 'Roboto',
+      fontSize: '16px',
+      color: '#bab9b9',
+      opacity: '1',
+
+  },
+},
+
 Inputbox2: {
   
   height: '80px',
@@ -179,6 +202,13 @@ inputPlaceholder: {
   notchedOutline: {
     borderWidth: '0px',
     borderColor: '#216194'
+  },
+  SignupDOB: {
+    width: '640px',
+    height: '80px',
+  background: "#FFFFFF",
+  boxShadow: "0px 15px 30px rgba(33, 97, 148, 0.1)",
+  borderRadius: "16px"
   },
 
 });

@@ -3,9 +3,7 @@ import '@hassanmojab/react-modern-calendar-datepicker/lib/DatePicker.css';
 import DatePicker from '@hassanmojab/react-modern-calendar-datepicker';
 import { Calendar, utils } from '@hassanmojab/react-modern-calendar-datepicker';
 import useStyles from './datepicker styles';
-
 import { Grid , Typography} from '@material-ui/core';
-import { date } from "yup";
 
 
 

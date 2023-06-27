@@ -5,23 +5,16 @@ import { Calendar, utils } from '@hassanmojab/react-modern-calendar-datepicker';
 import useStyles from './datepicker styles';
 
 import { Grid , Typography} from '@material-ui/core';
+import { date } from "yup";
+import { color } from "@mui/system";
 
 
 
 const DateInput = () => {
+  const [selectedDate, setSelectedDate] = useState(null);
 
-  
- 
-  const [selectedDayRange, setSelectedDayRange] = useState({
-    from: null,
-    to: null
-  });    
   
 const classes = useStyles();
-
-const inputValue = selectedDayRange.from && selectedDayRange.to ? (
-  ` ${selectedDayRange.from.day.toString().padStart(2, '0')}/${selectedDayRange.from.month.toString().padStart(2, '0')}/${selectedDayRange.from.year} to ${selectedDayRange.to.day.toString().padStart(2, '0')}/${selectedDayRange.to.month.toString().padStart(2, '0')}/${selectedDayRange.to.year}`
-) : '';
 
   const formatInputValue = () => {
     if (!selectedDate) return '';
@@ -31,7 +24,7 @@ const inputValue = selectedDayRange.from && selectedDayRange.to ? (
   const renderCustomInput = ({ ref }) => (
     <input
     style={{
-      margin: '20px 0px 0px -12px',
+      margin: '20px 0px 0px -8px',
       borderStyle: 'dotted',
       borderColor: '#fff',
       width: '300px',
@@ -39,33 +32,32 @@ const inputValue = selectedDayRange.from && selectedDayRange.to ? (
       outlineColor: '#fff',
       fontSize: '16px',
       color: '#216194',
-      "& input::placeholder": {
+      '&::placeholder': {
         fontFamily: 'Roboto',
         fontSize: '16px',
-        color: 'red',
+        color: '#BAB9B9',
         opacity: '1',
-  
+        
     },
+      
     }}
-    
     
       readOnly
       ref={ref} // necessary
-      placeholder="10/05/2023 to 15/05/2023"
-      value={inputValue}
+      placeholder="01/05/2023"
+      value={selectedDate ? ` ${selectedDate.day.toString().padStart(2, '0')}/${selectedDate.month.toString().padStart(2, '0')}/${selectedDate.year}` : ''}
+
       className="my-custom-input-class" // a styling class
     />
   )
   return (
     <Grid item
-    className={classes.Inputbox2}>
+    className={classes.Inputbox3}>
       <Typography
       style={{
         color: '#216194',
-        fontFamily: 'Roboto',
-        
-        margin: '0px 0px 0px -5px',
-        
+        fontFamily: 'Roboto',        
+        margin: '0px 0px 0px 0px',        
         fontSize: '18px',
         fontWeight: 'bold',
         height: '11px',
@@ -80,20 +72,20 @@ const inputValue = selectedDayRange.from && selectedDayRange.to ? (
             color: '#216194',
         },
       }}
-      >Dosage Period 1</Typography>
+      >Date of birth</Typography>
     <DatePicker
-      value={selectedDayRange}
+      value={selectedDate}
       outlineColor= "#fff"
+      placeholder="abcs"
       calendarPopperPosition="bottom"
-      onChange={setSelectedDayRange}
+      formatInputText={formatInputValue}
+      onChange={setSelectedDate}
       inputClassName="my-custom-input" 
       inputPlaceholder="e.g. 25/02/2023"
       calendarTodayClassName="customtodayday"
         renderInput={renderCustomInput}
-      minimumDate={utils().getToday()}
+      maximumDate={utils().getToday()}
       colorPrimary='#216194'
-      
-      colorPrimaryLight="rgba(75, 207, 250, 0.4)"
     />
     </Grid>
   );
