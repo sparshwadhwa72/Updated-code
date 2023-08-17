@@ -10,417 +10,417 @@ import Box from '@mui/material/Box';
 import DateInput from '../date-picker/datepicker3';
 import { Tabs, Tab , makeStyles} from '@material-ui/core';
 
-// const Dispense = ({  }) => {
-//   const { watch } = useFormContext();
+// // const Dispense = ({  }) => {
+// //   const { watch } = useFormContext();
 
-//   const [selectedDay, setSelectedDay] = useState(null);
+// //   const [selectedDay, setSelectedDay] = useState(null);
   
-//   const classes = useStyles();
+// //   const classes = useStyles();
 
-//   const [openDialog, setOpenDialog] = useState(false); // State to control the dialog visibility
-//   const [currentPage, setCurrentPage] = useState(1); // State to track the current page of the dialog
+// //   const [openDialog, setOpenDialog] = useState(false); // State to control the dialog visibility
+// //   const [currentPage, setCurrentPage] = useState(1); // State to track the current page of the dialog
 
-//   const handleDispenseClick = () => {
-//     setOpenDialog(true);
-//   };
+// //   const handleDispenseClick = () => {
+// //     setOpenDialog(true);
+// //   };
 
-//   const handleDialogClose = () => {
-//     setOpenDialog(false);
-//     setCurrentPage(1);
-//   };
+// //   const handleDialogClose = () => {
+// //     setOpenDialog(false);
+// //     setCurrentPage(1);
+// //   };
   
 
-//   const handleNextPage = () => {
-//     setCurrentPage((prevPage) => prevPage + 1);
-//   };
+// //   const handleNextPage = () => {
+// //     setCurrentPage((prevPage) => prevPage + 1);
+// //   };
 
 
   
-//   const handleNext = () => {
-//     setSelectedDate(selectedDay);
+// //   const handleNext = () => {
+// //     setSelectedDate(selectedDay);
     
-//     setCurrentPage((prevPage) => prevPage + 1);
-//   };
+// //     setCurrentPage((prevPage) => prevPage + 1);
+// //   };
 
-//   const handlePreviousPage = () => {
-//     setCurrentPage((prevPage) => prevPage - 1);
-//   };
+// //   const handlePreviousPage = () => {
+// //     setCurrentPage((prevPage) => prevPage - 1);
+// //   };
   
-//   const [selectedDate, setSelectedDate] = useState(null);
+// //   const [selectedDate, setSelectedDate] = useState(null);
 
-//   return (
-//     <Grid container item direction="column">
-//       <br />
-//       <br />
-//       <br />
-//       <Grid item container direction="column">
-//         <Button
-//           style={{
-//             width: '416px',
-//             height: '80px',
-//             borderRadius: '16px',
-//             background: '#FFFFFF',
-//             boxShadow: '0px 15px 30px rgba(33, 97, 148, 0.1)',
-//             textAlign: 'center',
-//             fontFamily: 'Roboto',
-//             textTransform: 'none',
-//             fontStyle: 'normal',
-//             fontWeight: 700,
-//             fontSize: '24px',
-//             lineHeight: '28px',
-//             color: '#216194',
-//           }}
-//           onClick={handleDispenseClick}
-//         >
-//           Dispense now
-//         </Button>
-//         <Button
-//           style={{
-//             width: '416px',
-//             marginTop: 19,
-//             height: '80px',
-//             borderRadius: '16px',
-//             background: '#FFFFFF',
-//             boxShadow: '0px 15px 30px rgba(33, 97, 148, 0.1)',
-//             textAlign: 'center',
-//             fontFamily: 'Roboto',
-//             textTransform: 'none',
-//             fontStyle: 'normal',
-//             fontWeight: 700,
-//             fontSize: '24px',
-//             lineHeight: '28px',
-//             color: '#216194',
-//           }}
-//           onClick={handleDispenseClick}
-//         >
-//           Schedule a dispense
-//         </Button>
-//       </Grid>
+// //   return (
+// //     <Grid container item direction="column">
+// //       <br />
+// //       <br />
+// //       <br />
+// //       <Grid item container direction="column">
+// //         <Button
+// //           style={{
+// //             width: '416px',
+// //             height: '80px',
+// //             borderRadius: '16px',
+// //             background: '#FFFFFF',
+// //             boxShadow: '0px 15px 30px rgba(33, 97, 148, 0.1)',
+// //             textAlign: 'center',
+// //             fontFamily: 'Roboto',
+// //             textTransform: 'none',
+// //             fontStyle: 'normal',
+// //             fontWeight: 700,
+// //             fontSize: '24px',
+// //             lineHeight: '28px',
+// //             color: '#216194',
+// //           }}
+// //           onClick={handleDispenseClick}
+// //         >
+// //           Dispense now
+// //         </Button>
+// //         <Button
+// //           style={{
+// //             width: '416px',
+// //             marginTop: 19,
+// //             height: '80px',
+// //             borderRadius: '16px',
+// //             background: '#FFFFFF',
+// //             boxShadow: '0px 15px 30px rgba(33, 97, 148, 0.1)',
+// //             textAlign: 'center',
+// //             fontFamily: 'Roboto',
+// //             textTransform: 'none',
+// //             fontStyle: 'normal',
+// //             fontWeight: 700,
+// //             fontSize: '24px',
+// //             lineHeight: '28px',
+// //             color: '#216194',
+// //           }}
+// //           onClick={handleDispenseClick}
+// //         >
+// //           Schedule a dispense
+// //         </Button>
+// //       </Grid>
 
-//       {/* Dialog */}
-//       <Dialog
-//         open={openDialog}
-//         onClose={handleDialogClose}
-//         PaperProps={{
-//           style: {
-//             width: '416px',
-//             height: '700px',
-//             borderRadius: '16px',
-//             boxShadow: '0px 15px 30px rgba(33, 97, 148, 0.1)',
-//           },
-//         }}
-//       >
-//         {currentPage === 1 && (
-//           <>
-//             <DialogTitle style={{ color: '#216194', textAlign: 'center',
-//           marginTop: 25, }}>
-//             Schedule dispense
-//             </DialogTitle>
-//             <DialogContent>
-//               <Typography
-//               style={{
+// //       {/* Dialog */}
+// //       <Dialog
+// //         open={openDialog}
+// //         onClose={handleDialogClose}
+// //         PaperProps={{
+// //           style: {
+// //             width: '416px',
+// //             height: '700px',
+// //             borderRadius: '16px',
+// //             boxShadow: '0px 15px 30px rgba(33, 97, 148, 0.1)',
+// //           },
+// //         }}
+// //       >
+// //         {currentPage === 1 && (
+// //           <>
+// //             <DialogTitle style={{ color: '#216194', textAlign: 'center',
+// //           marginTop: 25, }}>
+// //             Schedule dispense
+// //             </DialogTitle>
+// //             <DialogContent>
+// //               <Typography
+// //               style={{
                 
-//   fontFamily: "'Roboto'",
-//   fontStyle: "normal",
-//   fontWeight: 400,
-//   fontSize: "18px",
-//   lineHeight: "21px",
-//   textAlign: "center",
-//   color: "#BAB9B9"
-//               }}>Please select the date for the<br></br> scheduled remote dispense.</Typography>
-//               <Grid
-//               style={{
-//                 margin: '0px 0px 0px 25px'
-//               }}>
+// //   fontFamily: "'Roboto'",
+// //   fontStyle: "normal",
+// //   fontWeight: 400,
+// //   fontSize: "18px",
+// //   lineHeight: "21px",
+// //   textAlign: "center",
+// //   color: "#BAB9B9"
+// //               }}>Please select the date for the<br></br> scheduled remote dispense.</Typography>
+// //               <Grid
+// //               style={{
+// //                 margin: '0px 0px 0px 25px'
+// //               }}>
                 
-//       <Calendar value={selectedDay} onChange={setSelectedDay} colorPrimary="#216194" />
-//       </Grid>
+// //       <Calendar value={selectedDay} onChange={setSelectedDay} colorPrimary="#216194" />
+// //       </Grid>
 
-//             </DialogContent>
-//             <DialogActions style={{ justifyContent: 'center', marginBottom: 32 }}>
-//               <Button
-//                 style={{
-//                   color: '#216194',
-//                   borderColor: '#216194',
-//                   borderRadius: '16px',
-//                   borderWidth: '2px',
-//                   backgroundColor: '#f1f6fd',
-//                   textTransform: 'none',
-//                   width: '80px',
-//                   height: '42px',
-//                 }}
-//                 variant="outlined"
-//                 onClick={handleDialogClose}
-//               >
-//                 Quit
-//               </Button>
-//               <Button
-//                 style={{
-//                   borderRadius: '16px',
-//                   color: '#fff',
-//                   backgroundColor: '#216194',
-//                   textTransform: 'none',
-//                   width: '80px',
-//                   height: '42px',
-//                 }}
-//                 variant="contained"
-//                 onClick={handleNext}
-//               >
-//                 Next
-//               </Button>
-//             </DialogActions>
-//           </>
-//         )}
+// //             </DialogContent>
+// //             <DialogActions style={{ justifyContent: 'center', marginBottom: 32 }}>
+// //               <Button
+// //                 style={{
+// //                   color: '#216194',
+// //                   borderColor: '#216194',
+// //                   borderRadius: '16px',
+// //                   borderWidth: '2px',
+// //                   backgroundColor: '#f1f6fd',
+// //                   textTransform: 'none',
+// //                   width: '80px',
+// //                   height: '42px',
+// //                 }}
+// //                 variant="outlined"
+// //                 onClick={handleDialogClose}
+// //               >
+// //                 Quit
+// //               </Button>
+// //               <Button
+// //                 style={{
+// //                   borderRadius: '16px',
+// //                   color: '#fff',
+// //                   backgroundColor: '#216194',
+// //                   textTransform: 'none',
+// //                   width: '80px',
+// //                   height: '42px',
+// //                 }}
+// //                 variant="contained"
+// //                 onClick={handleNext}
+// //               >
+// //                 Next
+// //               </Button>
+// //             </DialogActions>
+// //           </>
+// //         )}
 
-// {currentPage === 2 && (
-//         <>
-//           <DialogTitle style={{ color: '#216194', textAlign: 'center' ,
-//          marginTop: 31}}>
-//            Schedule dispense
-//           </DialogTitle>
-//           <DialogContent>
-//             <Typography
-//             style={{
+// // {currentPage === 2 && (
+// //         <>
+// //           <DialogTitle style={{ color: '#216194', textAlign: 'center' ,
+// //          marginTop: 31}}>
+// //            Schedule dispense
+// //           </DialogTitle>
+// //           <DialogContent>
+// //             <Typography
+// //             style={{
               
-//   fontFamily: "'Roboto'",
-//   fontStyle: "normal",
-//   fontWeight: 400,
-//   fontSize: "18px",
-//   lineHeight: "21px",
-//   textAlign: "center",
+// //   fontFamily: "'Roboto'",
+// //   fontStyle: "normal",
+// //   fontWeight: 400,
+// //   fontSize: "18px",
+// //   lineHeight: "21px",
+// //   textAlign: "center",
   
-//   color: '#BAB9B9',
-//             }}>Please select the time for the drug to </Typography>
+// //   color: '#BAB9B9',
+// //             }}>Please select the time for the drug to </Typography>
             
-//             <Typography
-//             style={{
+// //             <Typography
+// //             style={{
               
-//   fontFamily: "'Roboto'",
-//   fontStyle: "normal",
-//   fontWeight: 400,
-//   fontSize: "18px",
-//   lineHeight: "21px",
-//   textAlign: "left",
+// //   fontFamily: "'Roboto'",
+// //   fontStyle: "normal",
+// //   fontWeight: 400,
+// //   fontSize: "18px",
+// //   lineHeight: "21px",
+// //   textAlign: "left",
   
-//   color: '#BAB9B9',
-//   marginLeft: 70,
-//             }}>be dispensed on</Typography>
-//             <Typography
-//               style={{
-//                 fontFamily: "'Roboto'",
-//                 fontStyle: 'normal',
-//                 fontWeight: 'bold',
-//                 fontSize: '18px',
-//                 lineHeight: '21px',
-//                 textAlign: 'center',
-//                 color: '#BAB9B9',
-//                 margin: '-20px 0px 0px 130px'
-//               }}
-//             >
-//               {selectedDate ? (
-//                 <>
-//                   {selectedDate.day}/{selectedDate.month}/{selectedDate.year}
-//                 </>
-//               ) : (
-//                 'None'
-//               )}
-//             </Typography>
-//             </DialogContent>
-//             <DialogActions style={{ justifyContent: 'center', marginBottom: 32 }}>
-//               <Button
-//                 style={{
-//                   color: '#216194',
-//                   borderColor: '#216194',
-//                   borderRadius: '16px',
-//                   borderWidth: '2px',
-//                   backgroundColor: '#f1f6fd',
-//                   textTransform: 'none',
-//                   width: '80px',
-//                   height: '42px',
-//                 }}
-//                 variant="outlined"
-//                 onClick={handlePreviousPage}
-//               >
-//                 Back
-//               </Button>
-//               <Button
-//                 style={{
-//                   borderRadius: '16px',
-//                   color: '#fff',
-//                   backgroundColor: '#216194',
-//                   textTransform: 'none',
-//                   width: '80px',
-//                   height: '42px',
-//                 }}
-//                 variant="contained"
-//                 onClick={handleNextPage}
-//               >
-//                 Next
-//               </Button>
-//             </DialogActions>
-//           </>
-//         )}
+// //   color: '#BAB9B9',
+// //   marginLeft: 70,
+// //             }}>be dispensed on</Typography>
+// //             <Typography
+// //               style={{
+// //                 fontFamily: "'Roboto'",
+// //                 fontStyle: 'normal',
+// //                 fontWeight: 'bold',
+// //                 fontSize: '18px',
+// //                 lineHeight: '21px',
+// //                 textAlign: 'center',
+// //                 color: '#BAB9B9',
+// //                 margin: '-20px 0px 0px 130px'
+// //               }}
+// //             >
+// //               {selectedDate ? (
+// //                 <>
+// //                   {selectedDate.day}/{selectedDate.month}/{selectedDate.year}
+// //                 </>
+// //               ) : (
+// //                 'None'
+// //               )}
+// //             </Typography>
+// //             </DialogContent>
+// //             <DialogActions style={{ justifyContent: 'center', marginBottom: 32 }}>
+// //               <Button
+// //                 style={{
+// //                   color: '#216194',
+// //                   borderColor: '#216194',
+// //                   borderRadius: '16px',
+// //                   borderWidth: '2px',
+// //                   backgroundColor: '#f1f6fd',
+// //                   textTransform: 'none',
+// //                   width: '80px',
+// //                   height: '42px',
+// //                 }}
+// //                 variant="outlined"
+// //                 onClick={handlePreviousPage}
+// //               >
+// //                 Back
+// //               </Button>
+// //               <Button
+// //                 style={{
+// //                   borderRadius: '16px',
+// //                   color: '#fff',
+// //                   backgroundColor: '#216194',
+// //                   textTransform: 'none',
+// //                   width: '80px',
+// //                   height: '42px',
+// //                 }}
+// //                 variant="contained"
+// //                 onClick={handleNextPage}
+// //               >
+// //                 Next
+// //               </Button>
+// //             </DialogActions>
+// //           </>
+// //         )}
 
-//         {currentPage === 3 && (
-//           <>
-//             <DialogTitle style={{ color: '#216194', textAlign: 'center' ,
-//           marginTop: 31}}>
-//               Schedule dispense
-//             </DialogTitle>
-//             <DialogContent>
-//               <Typography
-//               style={{
+// //         {currentPage === 3 && (
+// //           <>
+// //             <DialogTitle style={{ color: '#216194', textAlign: 'center' ,
+// //           marginTop: 31}}>
+// //               Schedule dispense
+// //             </DialogTitle>
+// //             <DialogContent>
+// //               <Typography
+// //               style={{
                 
-//   fontFamily: "'Roboto'",
-//   fontStyle: "normal",
-//   fontWeight: 400,
-//   fontSize: "18px",
-//   lineHeight: "21px",
-//   textAlign: "center",
-//   color: "#BAB9B9"
-//               }}>Please enter the quantity of drug to be dispensed on </Typography>
-//               <Typography
-//               style={{
-//                 fontFamily: "'Roboto'",
-//                 fontStyle: 'normal',
-//                 fontWeight: 'bold',
-//                 fontSize: '18px',
-//                 lineHeight: '21px',
-//                 textAlign: 'center',
-//                 color: '#BAB9B9',
-//                 margin: '-20px 0px 0px 130px'
-//               }}
-//             >
-//               {selectedDate ? (
-//                 <>
-//                   {selectedDate.day}/{selectedDate.month}/{selectedDate.year}
-//                 </>
-//               ) : (
-//                 'None'
-//               )}
-//             </Typography>
-//             <TextField
-//             autoFocus
-//             margin="dense"
+// //   fontFamily: "'Roboto'",
+// //   fontStyle: "normal",
+// //   fontWeight: 400,
+// //   fontSize: "18px",
+// //   lineHeight: "21px",
+// //   textAlign: "center",
+// //   color: "#BAB9B9"
+// //               }}>Please enter the quantity of drug to be dispensed on </Typography>
+// //               <Typography
+// //               style={{
+// //                 fontFamily: "'Roboto'",
+// //                 fontStyle: 'normal',
+// //                 fontWeight: 'bold',
+// //                 fontSize: '18px',
+// //                 lineHeight: '21px',
+// //                 textAlign: 'center',
+// //                 color: '#BAB9B9',
+// //                 margin: '-20px 0px 0px 130px'
+// //               }}
+// //             >
+// //               {selectedDate ? (
+// //                 <>
+// //                   {selectedDate.day}/{selectedDate.month}/{selectedDate.year}
+// //                 </>
+// //               ) : (
+// //                 'None'
+// //               )}
+// //             </Typography>
+// //             <TextField
+// //             autoFocus
+// //             margin="dense"
             
-//             id="name"
-//             placeholder='1'
+// //             id="name"
+// //             placeholder='1'
            
-//             style={{
-//               backgroundColor: '#216194',
-//               color: '#fff',
-//               borderRadius: '16px',
-//               width: '60px',
-//               height: '40px',
-//               alignContent: 'center',
-//               margin: '10px 0px 0px 130px',
+// //             style={{
+// //               backgroundColor: '#216194',
+// //               color: '#fff',
+// //               borderRadius: '16px',
+// //               width: '60px',
+// //               height: '40px',
+// //               alignContent: 'center',
+// //               margin: '10px 0px 0px 130px',
               
-//             }}
-//           InputProps={{
-//             disableUnderline: true,
+// //             }}
+// //           InputProps={{
+// //             disableUnderline: true,
             
 
            
-//           }}
+// //           }}
           
-//           inputProps={{
-//             className: classes.textFieldInput2,
-//           }}
+// //           inputProps={{
+// //             className: classes.textFieldInput2,
+// //           }}
             
        
 
-//             fullWidth
-//             variant="standard"
-//           />
-//           <Grid
-//           style={{
+// //             fullWidth
+// //             variant="standard"
+// //           />
+// //           <Grid
+// //           style={{
             
-//   margin: '-25px 0px 0px 200px'
-//           }}>
-//           <Typography
-//           style={{
+// //   margin: '-25px 0px 0px 200px'
+// //           }}>
+// //           <Typography
+// //           style={{
             
-//   fontFamily: "'Roboto'",
-//   fontStyle: "normal",
-//   fontWeight: 400,
-//   fontSize: "16px",
-//   lineHeight: "19px",
-//   color: "#216194",
-//           }}>Unit</Typography>
-//           </Grid>
+// //   fontFamily: "'Roboto'",
+// //   fontStyle: "normal",
+// //   fontWeight: 400,
+// //   fontSize: "16px",
+// //   lineHeight: "19px",
+// //   color: "#216194",
+// //           }}>Unit</Typography>
+// //           </Grid>
 
 
-//             </DialogContent>
-//             <DialogActions style={{ justifyContent: 'center', marginBottom: 32 }}>
-//               <Button
-//                 style={{
-//                   color: '#216194',
-//                   borderColor: '#216194',
-//                   borderRadius: '16px',
-//                   borderWidth: '2px',
-//                   backgroundColor: '#f1f6fd',
-//                   textTransform: 'none',
-//                   width: '128px',
-//                   height: '42px',
-//                 }}
-//                 variant="outlined"
-//                 onClick={handlePreviousPage}
-//               >
-//                 Back
-//               </Button>
-//               <Button
-//                 style={{
-//                   borderRadius: '16px',
-//                   color: '#fff',
-//                   backgroundColor: '#216194',
-//                   textTransform: 'none',
-//                   width: '128px',
-//                   height: '42px',
-//                 }}
-//                 variant="contained"
-//                 onClick={handleDialogClose}
-//               >
-//                 Confirm
-//               </Button>
-//             </DialogActions>
-//           </>
-//         )}
-//       </Dialog>
-//       <Grid
-//       style={{
+// //             </DialogContent>
+// //             <DialogActions style={{ justifyContent: 'center', marginBottom: 32 }}>
+// //               <Button
+// //                 style={{
+// //                   color: '#216194',
+// //                   borderColor: '#216194',
+// //                   borderRadius: '16px',
+// //                   borderWidth: '2px',
+// //                   backgroundColor: '#f1f6fd',
+// //                   textTransform: 'none',
+// //                   width: '128px',
+// //                   height: '42px',
+// //                 }}
+// //                 variant="outlined"
+// //                 onClick={handlePreviousPage}
+// //               >
+// //                 Back
+// //               </Button>
+// //               <Button
+// //                 style={{
+// //                   borderRadius: '16px',
+// //                   color: '#fff',
+// //                   backgroundColor: '#216194',
+// //                   textTransform: 'none',
+// //                   width: '128px',
+// //                   height: '42px',
+// //                 }}
+// //                 variant="contained"
+// //                 onClick={handleDialogClose}
+// //               >
+// //                 Confirm
+// //               </Button>
+// //             </DialogActions>
+// //           </>
+// //         )}
+// //       </Dialog>
+// //       <Grid
+// //       style={{
         
-//   background: "#FFFFFF",
-//   boxShadow: "0px 15px 30px rgba(33, 97, 148, 0.1)",
-//   borderRadius: "16px",
-//   width: '416px',
-//   height: '80px',
-//   marginTop: 150
-//       }}>
-//               <Typography
-//               style={{
-//                 fontFamily: "'Roboto'",
-//                 fontStyle: "normal",
-//                 fontWeight: 400,
-//                 fontSize: "16px",
-//                 lineHeight: "19px",
-//                 color: "#BAB9B9",
-//                 margin: '45px 0px 0px 20px'
-//               }}
-//             >
-//               {selectedDate ? (
-//                 <>
-//                   {selectedDate.day}/{selectedDate.month}/{selectedDate.year}
-//                 </>
-//               ) : (
-//                 'None'
-//               )}
-//             </Typography>
-//             </Grid>
-//     </Grid>
-//   );
-// };
+// //   background: "#FFFFFF",
+// //   boxShadow: "0px 15px 30px rgba(33, 97, 148, 0.1)",
+// //   borderRadius: "16px",
+// //   width: '416px',
+// //   height: '80px',
+// //   marginTop: 150
+// //       }}>
+// //               <Typography
+// //               style={{
+// //                 fontFamily: "'Roboto'",
+// //                 fontStyle: "normal",
+// //                 fontWeight: 400,
+// //                 fontSize: "16px",
+// //                 lineHeight: "19px",
+// //                 color: "#BAB9B9",
+// //                 margin: '45px 0px 0px 20px'
+// //               }}
+// //             >
+// //               {selectedDate ? (
+// //                 <>
+// //                   {selectedDate.day}/{selectedDate.month}/{selectedDate.year}
+// //                 </>
+// //               ) : (
+// //                 'None'
+// //               )}
+// //             </Typography>
+// //             </Grid>
+// //     </Grid>
+// //   );
+// // };
 
-// export default Dispense;
+// // export default Dispense;
 
 
 const Settings = () => {
@@ -868,3 +868,589 @@ const TabPanel = ({ children, value, index }) => {
 };
 
 export default Settings;
+
+// import React, { useState, useEffect } from 'react';
+// import { Grid, Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Paper, Typography, TextField, InputBase } from '@material-ui/core';
+// import { useForm, Controller } from 'react-hook-form';
+// import { makeStyles } from '@material-ui/core/styles';
+// import AutocompleteDropdown from '../autocomplete-dropdown/autocomplete-dropdown';
+// // import AutoCompleteMultiple from '../form-components/autocomplete-multiple/autocomplete-multiple'
+// // import SelectMultiple from '../form-components/multiple-select/select-multiple';
+// import DateInput from '../date-picker/datepicker3';
+// // import TimeInput from '../form-components/time-picker/time-picker';
+// import { format, getDate, getHours, getMinutes, getMonth, getYear } from 'date-fns';
+// // import DeletableItem from '@components/layout/deletable-item/deletable-item';
+
+// import HelpIcon from '@material-ui/icons/Help';
+// import HighlightOffIcon from '@material-ui/icons/HighlightOff';
+// import IconButton from '@material-ui/core/IconButton';
+
+// const useStyles = makeStyles({
+//     titleText: {
+//         fontFamily: 'Roboto',
+//         fontWeight: 'bold',
+//         fontSize: '24px',
+//         color: '#216194',
+//     },
+//     formButton: {
+//         backgroundColor: '#216194',
+//         borderRadius: '16px',
+//         minWidth: '80px',
+//         maxWidth: '200px',
+//         height: '48px',
+//         boxShadow: '0 0 0 0',
+//         fontFamily: 'Roboto',
+//         color: '#fff',
+//         fontSize: '16px',
+//         textTransform: 'capitalize',
+//     },
+
+//     outlineButton: {
+//         borderRadius: '16px',
+//         minWidth: '80px',
+//         maxWidth: '128px',
+//         height: '48px',
+//         boxShadow: '0 0 0 0',
+//         color: '#216194',
+//         textTransform: 'capitalize',
+//         border: 'solid 2px #216194'
+//     },
+//     bigButton: {
+//         height: 80,
+//         backgroundColor: '#fff',
+//         padding: 32,
+//         borderRadius: 16,
+//         boxShadow: '0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12)',
+//         color: '#216194',
+//         fontWeight: 'bold',
+//         fontFamily: 'Roboto',
+//         fontSize: '24px',
+//         textTransform: 'capitalize'
+//     },
+//     smallTextInput: {
+//         textAlign: 'center',
+//         width: 60,
+//         borderRadius: 16,
+//         height: 40,
+//         boxShadow: 'none',
+//         padding: 10,
+//         backgroundColor: '#f1f6fd',
+//         "& .MuiInputBase-input ": {
+//             textAlign: 'center',
+//             color: '#bab9b9'
+//         }
+//     },
+//     errorText: {
+//         fontSize: '11px'
+//     },
+
+//     dialogTitle: {
+//         color: '#216194',
+//         textAlign: 'center',
+//         fontWeight: 'bold',
+//     },
+
+//     dialogText: {
+//         color: '#969696',
+//         textAlign: 'center',
+//         fontSize: '18px',
+//     },
+
+//     dialogActionsLayout: {
+//         display: 'flex',
+//         justifyContent: 'center',
+//         alignItems: 'center',
+//     },
+
+//     dialogLayout: {
+//         borderRadius: '16px',
+//         padding: '32px 50px',
+//         width: 416,
+//         textAlign: 'center'
+//     },
+//     titlePaper: {
+//         padding: '26px 20px',
+//         borderRadius: '16px',
+//     },
+//     paper: {
+//         padding: '16px',
+//         minHeight: '315px',
+//         maxWidth: '640px',
+//         borderRadius: '16px'
+//     },
+
+//     itemPaper: {
+//         borderRadius: 16,
+//         backgroundColor: '#fff',
+//         padding: 16,
+//         width: '100%',
+//         height: 80
+//     },
+
+//     itemChip: {
+//         borderRadius: 16,
+//         backgroundColor: '#f3f8fe',
+//         padding: 10,
+//         textAlign: 'center',
+//         width: '100%'
+//     }
+
+// });
+
+// const DispenseDrug = () => {
+//     const { handleSubmit: handleSubmit, control: control, formState: { errors } } = useForm({
+//         mode: 'onTouched',
+//         reValidateMode: 'onChange',
+//         criteriaMode: 'all'
+//     });
+
+//     const { handleSubmit: handleSubmitDispense, control: controlDispense, formState: { errorsDispense }, setValue } = useForm({
+//         mode: 'onTouched',
+//         reValidateMode: 'onChange',
+//         criteriaMode: 'all'
+//     });
+
+//     const classes = useStyles();
+
+//     const userList = ['jpowlowski@gmail.com',
+//         'runolfsson.lane@gmail.com',
+//         'alayna.mante@gmail.com',
+//         'cydney01@gmail.com',
+//         'garett.fritsch@gmail.com'];
+//     const groupList = ['Group 1', 'Group 2', 'Group 3',
+//         'Group 4', 'Group 5', 'Group 6', 'Group 7',
+//         'Group 7', 'Group 8', 'Group 9', 'Group 10',];
+//     const DRUG = 'Panadol'
+
+//     const [open, setOpen] = React.useState(false);
+//     const [openDispenseNow, setOpenDispenseNow] = useState(false);
+//     const [openDispenseSchedule, setOpenDispenseSchedule] = useState(false)
+//     const [submittedData, setSubmittedData] = useState({});
+//     const [scheduleSubmited, setScheduleSubmited] = useState(false);
+//     const [modalPage, setModalPage] = useState(1)
+//     const [page, setPage] = useState(1)
+
+//     //states to simulate data submit to backend
+//     const [dataIndex, setDataIndex] = useState(0)
+//     const [dataSubmitted, setDataSubmitted] = useState([])
+
+//     useEffect(() => {
+//         if (dataSubmitted.length === 0) {
+//             setScheduleSubmited(false)
+//         }
+//     }, [dataSubmitted])
+
+//     //functions for page 1
+//     const handleClickOpen = () => {
+//         setOpen(true);
+//     };
+
+//     const handleClose = () => {
+//         setOpen(false);
+//     };
+
+//     const onSubmit = (data) => {
+//         setPage((prevPage) => prevPage + 1)
+//         setSubmittedData(data)
+//     }
+
+
+//     // functions for page 2
+//     const getDispenseTimeText = () => {
+//         return <><b>{format(submittedData.dispenseDate, 'dd/MM/yyyy')}</b> at <b>{format(submittedData.dispenseDate, 'hh:mm a')}</b></>
+//     }
+
+//     const handleCloseDispenseNow = () => {
+//         setOpenDispenseNow(false)
+//         setModalPage(1)
+//     }
+
+//     const handleCloseDispenseSchedule = () => {
+//         setOpenDispenseSchedule(false)
+//         setModalPage(1)
+//     }
+
+//     const onSubmitDispense = (data) => {
+//         if (data.dispenseTime) {
+//             delete data.dispenseTime
+//         }
+//         setSubmittedData({ ...submittedData, ...data })
+//         setModalPage((prevPage) => prevPage + 1)
+//     }
+
+//     const onSubmitDispenseTime = (data) => {
+//         const timeAdjustedDate = new Date(getYear(submittedData.dispenseDate), getMonth(submittedData.dispenseDate), getDate(submittedData.dispenseDate), getHours(data.dispenseTime), getMinutes(data.dispenseTime))
+//         //setavlue used to change the form data from the previous input
+//         setValue('dispenseDate', timeAdjustedDate)
+//         setSubmittedData({
+//             ...submittedData,
+//             dispenseDate: timeAdjustedDate
+//         })
+//         setModalPage((prevPage) => prevPage + 1)
+//     }
+
+//     const onSubmitDispenseNow = () => {
+//         console.log('push to next page')
+//         setOpenDispenseNow(false)
+//     }
+
+//     const onSubmitDispenseSchedule = () => {
+//         console.log('simulate data submit')
+//         setOpenDispenseSchedule(false)
+//         setModalPage(1)
+
+//         //this part of the code is only for simulation use
+//         setDataSubmitted([...dataSubmitted, { ...submittedData, index: dataIndex }])
+//         setDataIndex((prevState) => prevState + 1)
+//         setSubmittedData({ ...submittedData, dispenseDate: null, dispenseTime: null })
+
+//         setScheduleSubmited(true)
+//     }
+
+//     const handleItemDelete = (index) => {
+//         const updatedItems = dataSubmitted.filter(item => item.index !== index);
+//         setDataSubmitted(updatedItems)
+//     }
+
+//     return (
+//         <>
+//             <Grid container direction='column' spacing={4} style={{ marginBottom: 16 }}>
+//                 <Grid item>
+//                     <Paper className={classes.titlePaper} elevation={2}>
+//                         <Typography className={classes.titleText}>
+//                             Dispense Drug - {DRUG}
+//                         </Typography>
+//                         {controlDispense.register ? controlDispense.register : ''}
+//                     </Paper>
+//                 </Grid>
+//             </Grid>
+//             {page == 1 && <form style={{ width: '100vw' }} onSubmit={handleSubmit(onSubmit)}>
+//                 <Grid container direction='column' spacing={4}>
+//                     <Grid item>
+//                         <Paper className={classes.paper} elevation={2}>
+//                             <Grid container direction='column'>
+//                                 <Grid item>
+//                                     <Typography className={classes.titleText} style={{ fontSize: '18px', marginBottom: '32px' }}>
+//                                         Individual Customer
+//                                     </Typography>
+//                                 </Grid>
+//                                 <Grid item>
+//                                     <AutocompleteDropdown
+//                                         autocompleteOptions={userList}
+//                                         label={'Add Customer*'}
+//                                         control={control}
+//                                         name='customer'
+//                                         rules={{ required: true }}
+//                                         placeholder={`(i.e username)`}
+//                                     ></AutocompleteDropdown>
+//                                 </Grid>
+//                             </Grid>
+//                         </Paper>
+//                     </Grid>
+//                     <Grid item>
+//                         <Paper className={classes.paper} elevation={2}>
+//                             <Typography className={classes.titleText} style={{ fontSize: '18px', marginBottom: '32px' }}>
+//                                 Group
+//                             </Typography>
+                           
+//                         </Paper>
+//                     </Grid>
+//                 </Grid>
+//                 <Grid container justifyContent='flex-end' style={{ marginTop: 96 }}>
+//                     <Grid item>
+//                         <Button variant='outlined' className={classes.outlineButton} onClick={handleClickOpen} style={{ marginRight: '16px' }}>
+//                             Quit
+//                         </Button>
+//                         <Dialog
+//                             open={open}
+//                             onClose={handleClose}
+//                             aria-labelledby="alert-dialog-title"
+//                             aria-describedby="alert-dialog-description"
+//                             classes={{
+//                                 paper: classes.dialogLayout
+//                             }}
+//                         >
+//                             <DialogTitle id="alert-dialog-title" className={classes.dialogTitle}>{"Are you sure you want to quit?"}</DialogTitle>
+//                             <DialogContent>
+//                                 <DialogContentText className={classes.dialogText} id="alert-dialog-description">
+//                                     The information will not be safed if you quit now.
+//                                 </DialogContentText>
+//                             </DialogContent>
+//                             <DialogActions className={classes.dialogActionsLayout}>
+//                                 <Button onClick={handleClose} variant='outlined' className={classes.outlineButton}>
+//                                     Quit
+//                                 </Button>
+//                                 <Button onClick={handleClose} variant='contained' className={classes.formButton}>
+//                                     Stay
+//                                 </Button>
+//                             </DialogActions>
+//                         </Dialog>
+//                         <Button type='submit' variant='contained' className={classes.formButton}>
+//                             Next
+//                         </Button>
+//                     </Grid>
+//                 </Grid>
+//             </form>}
+
+//             {page == 2 && <React.Fragment style={{ width: '100vw' }}>
+//                 <Grid container direction='column' spacing={4}>
+//                     {/* DISPENSE NOW */}
+//                     <Grid item lg={4} md={6}>
+//                         <Button className={classes.bigButton} fullWidth onClick={() => setOpenDispenseNow(true)}>
+//                             Dispense Now
+//                         </Button>
+
+//                         <Dialog
+//                             open={openDispenseNow}
+//                             onClose={handleCloseDispenseNow}
+//                             classes={{
+//                                 paper: classes.dialogLayout
+//                             }}
+//                         >
+//                             {modalPage == 1 && <>
+//                                 <DialogTitle className={classes.dialogTitle}>{'Enter the quantity to be dispensed'}</DialogTitle>
+//                                 <form onSubmit={handleSubmitDispense(onSubmitDispense)}>
+//                                     <DialogContent style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: 32 }}>
+//                                         <Controller
+//                                             render={({ field }) =>
+//                                                 <InputBase
+//                                                     {...field}
+//                                                     className={classes.smallTextInput}
+//                                                 />}
+//                                             name="quantity"
+//                                             control={controlDispense}
+//                                             defaultValue="1"
+//                                         />
+
+//                                         <Typography style={{ marginLeft: 8, color: '#216194' }}>
+//                                             Unit
+//                                         </Typography>
+//                                     </DialogContent>
+//                                     <DialogActions className={classes.dialogActionsLayout}>
+//                                         <Button onClick={handleCloseDispenseNow} variant='outlined' className={classes.outlineButton}>
+//                                             Quit
+//                                         </Button>
+//                                         <Button type='submit' variant='contained' className={classes.formButton}>
+//                                             Dispense
+//                                         </Button>
+//                                     </DialogActions>
+//                                 </form>
+//                             </>}
+//                             {modalPage == 2 && <>
+//                                 <DialogTitle className={classes.dialogTitle}>{'Dispense Drug'}</DialogTitle>
+//                                 <form onSubmit={handleSubmitDispense(onSubmitDispenseNow)}>
+//                                     <DialogContent style={{ display: 'flex', flexDirection: 'column', padding: 32 }}>
+//                                         <DialogContentText>
+//                                             The drug(s) listed below will be dispensed. Please inform the user(s) about this.
+//                                         </DialogContentText>
+//                                         <DialogContentText style={{ fontWeight: 'bold' }}>
+//                                             Confirm Drug
+//                                         </DialogContentText>
+//                                         <DialogContentText>
+//                                             {DRUG} (1000 mg) &nbsp; &nbsp; Unit: {submittedData.quantity}
+//                                         </DialogContentText>
+//                                         <DialogContentText style={{ fontWeight: 'bold' }}>
+//                                             User / Group
+//                                         </DialogContentText>
+//                                         {submittedData.customer.map((customer) => <DialogContentText key={customer}>{customer}</DialogContentText>)}
+//                                         {submittedData.group.map((group) => <DialogContentText key={group}>{group}</DialogContentText>)}
+//                                     </DialogContent>
+//                                     <DialogActions className={classes.dialogActionsLayout}>
+//                                         <Button onClick={handleCloseDispenseNow} variant='outlined' className={classes.outlineButton}>
+//                                             Quit
+//                                         </Button>
+//                                         <Button type='submit' variant='contained' className={classes.formButton}>
+//                                             Confirm
+//                                         </Button>
+//                                     </DialogActions>
+//                                 </form>
+//                             </>}
+//                         </Dialog>
+
+//                     </Grid>
+
+//                     {/* SCHEDULE DISPENSE */}
+//                     <Grid item lg={4} md={6}>
+//                         <Button fullWidth onClick={() => setOpenDispenseSchedule(true)} className={classes.bigButton}>
+//                             Schedule Dispense
+//                         </Button>
+
+//                         <Dialog
+//                             open={openDispenseSchedule}
+//                             onClose={handleCloseDispenseSchedule}
+//                             classes={{
+//                                 paper: classes.dialogLayout
+//                             }}
+//                             PaperProps={{
+//                                 style: {
+//                                     paddding: '32px 0'
+//                                 }
+//                             }}
+//                         >
+//                             {modalPage == 1 && <>
+//                                 <DialogTitle className={classes.dialogTitle}>{'Schedule Dispense'}</DialogTitle>
+//                                 <form onSubmit={handleSubmitDispense(onSubmitDispense)}>
+//                                     <DialogContent style={{ padding: '32px 0' }}>
+//                                         <DialogContentText>
+//                                             Please select the date for the scheduled remote dispense.
+//                                         </DialogContentText>
+//                                         <DateInput
+//                                             control={controlDispense}
+//                                             name='dispenseDate'
+//                                             variant={'static'}
+//                                             disablePast
+//                                             rules={{}}
+//                                         />
+//                                     </DialogContent>
+//                                     <DialogActions className={classes.dialogActionsLayout}>
+//                                         <Button onClick={handleCloseDispenseSchedule} variant='outlined' className={classes.outlineButton}>
+//                                             Quit
+//                                         </Button>
+//                                         <Button type='submit' variant='contained' className={classes.formButton}>
+//                                             Next
+//                                         </Button>
+//                                     </DialogActions>
+//                                 </form>
+//                             </>}
+//                             {modalPage == 2 && <>
+//                                 <DialogTitle className={classes.dialogTitle}>{'Schedule Dispense'}</DialogTitle>
+//                                 <form onSubmit={handleSubmitDispense(onSubmitDispenseTime)}>
+//                                     <DialogContent style={{ padding: '32px 0' }}>
+//                                         <DialogContentText>
+//                                             Please select the time for the scheduled remote dispense.
+//                                         </DialogContentText>
+//                                         <TimeInput
+//                                             control={controlDispense}
+//                                             name='dispenseTime'
+//                                             type='time'
+//                                             rules={{}}
+//                                         />
+//                                     </DialogContent>
+//                                     <DialogActions className={classes.dialogActionsLayout}>
+//                                         <Button onClick={() => setModalPage((currentPage) => currentPage - 1)} variant='outlined' className={classes.outlineButton}>
+//                                             Back
+//                                         </Button>
+//                                         <Button type='submit' variant='contained' className={classes.formButton}>
+//                                             Next
+//                                         </Button>
+//                                     </DialogActions>
+//                                 </form>
+//                             </>}
+//                             {modalPage == 3 && <>
+//                                 <DialogTitle className={classes.dialogTitle}>Schedule Dispense</DialogTitle>
+//                                 <form onSubmit={handleSubmitDispense(onSubmitDispense)}>
+//                                     <DialogContent style={{ padding: 32 }}>
+//                                         <DialogContentText>
+//                                             Please enter the quantity of the drug to be dispensed on &nbsp;
+//                                             {getDispenseTimeText()}
+//                                         </DialogContentText>
+//                                         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: 32 }}>
+//                                             <Controller
+//                                                 render={({ field }) =>
+//                                                     <InputBase
+//                                                         {...field}
+//                                                         className={classes.smallTextInput}
+//                                                     />}
+//                                                 name="quantity"
+//                                                 control={controlDispense}
+//                                                 defaultValue="1"
+//                                             />
+
+//                                             <Typography style={{ marginLeft: 8, color: '#216194' }}>
+//                                                 Unit
+//                                             </Typography>
+//                                         </div>
+//                                     </DialogContent>
+//                                     <DialogActions className={classes.dialogActionsLayout}>
+//                                         <Button onClick={() => setModalPage((currentPage) => currentPage - 1)} variant='outlined' className={classes.outlineButton}>
+//                                             Back
+//                                         </Button>
+//                                         <Button type='submit' variant='contained' className={classes.formButton}>
+//                                             Dispense
+//                                         </Button>
+//                                     </DialogActions>
+//                                 </form>
+//                             </>}
+//                             {modalPage == 4 && <>
+//                                 <DialogTitle className={classes.dialogTitle}>{'Dispense Drug'}</DialogTitle>
+//                                 <form onSubmit={handleSubmitDispense(onSubmitDispenseSchedule)}>
+//                                     <DialogContent style={{ display: 'flex', flexDirection: 'column', padding: 32 }}>
+//                                         <DialogContentText>
+//                                             The drug(s) listed below will be dispensed on {getDispenseTimeText()}. Please inform the user(s) about this.
+//                                         </DialogContentText>
+//                                         <DialogContentText style={{ fontWeight: 'bold' }}>
+//                                             Confirm Drug
+//                                         </DialogContentText>
+//                                         <DialogContentText>
+//                                             {DRUG} (1000 mg) &nbsp; &nbsp; Unit: {submittedData.quantity}
+//                                         </DialogContentText>
+//                                         <DialogContentText style={{ fontWeight: 'bold' }}>
+//                                             User / Group
+//                                         </DialogContentText>
+//                                         {submittedData.customer.map((customer) => <DialogContentText key={customer}>{customer}</DialogContentText>)}
+//                                         {submittedData.group.map((group) => <DialogContentText key={group}>{group}</DialogContentText>)}
+//                                     </DialogContent>
+//                                     <DialogActions className={classes.dialogActionsLayout}>
+//                                         <Button onClick={handleCloseDispenseSchedule} variant='outlined' className={classes.outlineButton}>
+//                                             Quit
+//                                         </Button>
+//                                         <Button type='submit' variant='contained' className={classes.formButton}>
+//                                             Confirm
+//                                         </Button>
+//                                     </DialogActions>
+//                                 </form>
+//                             </>}
+//                         </Dialog>
+//                     </Grid>
+
+
+//                     {scheduleSubmited && <>
+//                         <Grid lg={4} item container direction='column'>
+//                             <Grid item>
+//                                 <Typography className={classes.titleText}>
+//                                     Scheduled Dispense
+//                                 </Typography>
+//                             </Grid>
+//                             <Grid item container justifyContent='space-between' style={{ padding: 16 }}>
+//                                 <Grid item>
+//                                     <Typography>
+//                                         Time
+//                                     </Typography>
+//                                 </Grid>
+//                                 <Grid item style={{ display: 'flex' }}>
+//                                     <HelpIcon></HelpIcon>
+//                                     <Typography style={{ marginLeft: 8 }}>
+//                                         Quantity
+//                                     </Typography>
+//                                 </Grid>
+//                             </Grid>
+//                             <Grid item container spacing={2}>
+//                                 {dataSubmitted.map((data) =>
+//                                     <Grid item xs={12} key={''}>
+//                                         <DeletableItem
+//                                             key={data.index}
+//                                             tittleText={format(data.dispenseDate, 'hh:mm a')}
+//                                             subText={
+//                                                 <>
+//                                                     {format(data.dispenseDate, 'dd/MM/yyyy')} | &nbsp;
+//                                                     {data.customer.map((customer) => <b key={customer}>{customer}, </b>)}
+//                                                     {data.group.map((group) => <b key={group}>{group}, </b>)}
+//                                                 </>
+//                                             }
+//                                             onClick={() => handleItemDelete(data.index)}
+//                                             chipContent={data.quantity}
+//                                         ></DeletableItem>
+//                                     </Grid>)}
+//                             </Grid>
+//                         </Grid>
+//                     </>}
+//                 </Grid>
+//             </React.Fragment >}
+//         </>
+//     )
+
+
+// }
+
+// export default DispenseDrug;
+

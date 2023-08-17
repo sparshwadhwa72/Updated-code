@@ -5,6 +5,7 @@ import { lighten, makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
+import { useRouter } from 'next/router';
 import { Select, MenuItem, FormControl, InputLabel, ListItemText, MoreVertIcon } from '@material-ui/core';
 import { Controller } from 'react-hook-form';
 import clsx from 'clsx';
@@ -682,6 +683,11 @@ export default function EnhancedTable() {
   const handleClose = () => {
     setOpen(false);
   };
+  const router = useRouter();
+
+  const handleClick2 = () => {
+    router.push('./Edit-drug'); // Replace '/another-page' with the actual route of the page you want to navigate to
+  };
 
 
   const [isOpen, setIsOpen] = useState(false);
@@ -848,7 +854,7 @@ export default function EnhancedTable() {
   </MenuItem>
   
   <MenuItem value="option2">
-    <Button fullWidth
+    <Button fullWidth  onClick={handleClick2}
       style={{
         width: '94px',
         height: '40px',

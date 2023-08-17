@@ -5,16 +5,15 @@ import '@fontsource/roboto';
 const useStyles = makeStyles({
     textField: {
         height: '80px',
-        width: '306px',
+        minWidth: '306px',
+        maxWidth: '306px',
         borderRadius: '16px',
         boxShadow: '0 15px 30px 0 rgba(33, 97, 148, 0.15)',
         padding: '16px 76px 16px 20px',
         backgroundColor: '#fff',
-        '@media(max-Width: 390px)' : {
-          width: '100%',
-          margin: '-17px 0px 0px 0px'
-
-        }
+        '@media (max-width: 600px)': {
+          minWidth: '100%', // Set to 100% width for screens smaller than 600px
+        },
     },
     
     textFieldLabel: {

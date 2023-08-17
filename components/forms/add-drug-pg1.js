@@ -154,8 +154,7 @@ const AddDrugOne = ({formMethods}) => {
                             rules={{}}
                             label={`Quantity`}
                             placeholder={`e.g. 123`}
-                            additionalStyles={{}}
-                                                     
+                            additionalStyles={{}}                                                    
                             
                         />
                     </Grid>
